@@ -44,4 +44,33 @@ example = { path = "/path/to/example" }
 cd foo # where is Cargo.toml
 ...
 cargo build
+//or
+cargo build --release
+```
+* recompilation
+```
+cargo run
+```
+
+
+
+# Modules
+## modules as a separate file
+```
+#filename is module_b.rs or module_b/mod.rs
+pub mod module_b;
+```
+
+## modules as a part of file
+```
+pub mod module_a {
+    pub fn a_thing() {
+         println!("This is a thing");
+    }
+
+    pub fn a_second_thing() {
+         a_thing();
+         println!("This is another thing");
+    }
+}
 ```
